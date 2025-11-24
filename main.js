@@ -1,5 +1,5 @@
-const PLACEHOLDER_URL = 'https://picsum.photos/900/500';
-window.handleImageError = (imageElement) => { imageElement.src = PLACEHOLDER_URL; };
+const URL_PLACEHOLDER = 'https://picsum.photos/900/500';
+window.handleImageError = (el) => { el.src = URL_PLACEHOLDER; }; // Line 2: No comments, simple code
 
 // --- Scroll Progress Bar Logic ---
 window.addEventListener('scroll', () => {
@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
 });
 
 // --- 1. Background Parallax Effect ---
-const body = document.body;
+const bodyElement = document.body;
 const parallaxStrength = 0.005; 
 
 const handleMouseMove = (e) => {
@@ -27,8 +27,8 @@ const handleMouseMove = (e) => {
     const moveX = (mouseX - centerX) * parallaxStrength * -1;
     const moveY = (mouseY - centerY) * parallaxStrength * -1;
     
-    body.style.setProperty('--bg-x', ${moveX}px);
-    body.style.setProperty('--bg-y', ${moveY}px);
+    bodyElement.style.setProperty('--bg-x', ${moveX}px);
+    bodyElement.style.setProperty('--bg-y', ${moveY}px);
 }
 
 document.addEventListener('mousemove', handleMouseMove);
