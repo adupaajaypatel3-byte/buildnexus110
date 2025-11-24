@@ -1,6 +1,5 @@
-'use strict'; 
 const PLACEHOLDER_URL = 'https://picsum.photos/900/500';
-window.handleImageError = (imageElement) => { imageElement.src = PLACEHOLDER_URL; }; // Error area consolidated to line 3
+window.handleImageError = (imageElement) => { imageElement.src = PLACEHOLDER_URL; };
 
 // --- NEW: Scroll Progress Bar Logic ---
 window.addEventListener('scroll', () => {
