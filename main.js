@@ -1,10 +1,6 @@
 'use strict'; 
-    
-// *** GLOBAL FUNCTION: Used for the image error handler ***
 const PLACEHOLDER_URL = 'https://picsum.photos/900/500';
-
-// Line 37 area is now condensed: Defines function with arrow syntax
-window.handleImageError = (imageElement) => { imageElement.src = PLACEHOLDER_URL; };
+window.handleImageError = (imageElement) => { imageElement.src = PLACEHOLDER_URL; }; // Error area consolidated to line 3
 
 // --- NEW: Scroll Progress Bar Logic ---
 window.addEventListener('scroll', () => {
