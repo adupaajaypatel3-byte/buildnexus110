@@ -1,12 +1,13 @@
 'use strict'; 
     
     // *** GLOBAL FUNCTION: Used for the image error handler ***
-    const PLACEHOLDER_URL = 'https://picsum.photos/900/500'; // Corrected variable name
+    const PLACEHOLDER_URL = 'https://picsum.photos/900/500';
 
+    // This function runs if the mockup image fails to load
     window.handleImageError = function(imageElement) {
-        // This is a placeholder for the missing mockup image
+        // Line 37 is near here - ensuring this function definition is clean
         imageElement.src = PLACEHOLDER_URL; 
-    }
+    }; // Added semicolon just for extra clarity
 
     // --- NEW: Scroll Progress Bar Logic ---
     window.addEventListener('scroll', function() {
