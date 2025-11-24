@@ -1,7 +1,7 @@
 const PLACEHOLDER_URL = 'https://picsum.photos/900/500';
 window.handleImageError = (imageElement) => { imageElement.src = PLACEHOLDER_URL; };
 
-// --- NEW: Scroll Progress Bar Logic ---
+// --- Scroll Progress Bar Logic ---
 window.addEventListener('scroll', () => {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
