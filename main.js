@@ -3,14 +3,13 @@
     // *** GLOBAL FUNCTION: Used for the image error handler ***
     const PLACEHOLDER_URL = 'https://picsum.photos/900/500';
 
-    // This function runs if the mockup image fails to load
-    window.handleImageError = function(imageElement) {
-        // Line 37 is near here - ensuring this function definition is clean
+    // This function runs if the mockup image fails to load (Line 38 area is now cleaner)
+    window.handleImageError = (imageElement) => {
         imageElement.src = PLACEHOLDER_URL; 
-    }; // Added semicolon just for extra clarity
+    };
 
     // --- NEW: Scroll Progress Bar Logic ---
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', () => {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (winScroll / height) * 100;
@@ -25,7 +24,7 @@
     const body = document.body;
     const parallaxStrength = 0.005; 
 
-    function handleMouseMove(e) {
+    const handleMouseMove = (e) => {
         const mouseX = e.clientX;
         const mouseY = e.clientY;
         
@@ -47,7 +46,7 @@
     const dots = document.querySelectorAll('.dot');
     let currentIndex = 0;
 
-    function updateSlider() {
+    const updateSlider = () => {
         cards.forEach((card, index) => {
             card.style.display = (index === currentIndex) ? 'block' : 'none';
         });
